@@ -46,6 +46,16 @@
   <!-- End Meta Pixel Code -->
 
   <!-- Google tag (gtag.js) - Google Analytics -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7JJ5S98');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- End Google Analytics Tag -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -53,6 +63,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7JJ5S98" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id="app">
 
     <!-- Início do Header -->
@@ -72,7 +86,7 @@
       <div class="container">
         <img style="" class="pwrImgLogo" id="logo" alt="Logo" src="https://app.powercrm.com.br/cmpnImg?h=dWDV8dEV">
         <a style=""
-          href="https://api.whatsapp.com/send?phone=5511934074414&amp;text=Ol%C3%A1 SERGIO SOUZA, quero fazer uma cota%C3%A7%C3%A3o."
+          href="https://api.whatsapp.com/send?phone=5511934074414&amp;text=Ol%C3%A1 SERGIO SOUSA, quero fazer uma cota%C3%A7%C3%A3o."
           target="_blank" class="button-whatsapp pwrConsultantExists">
           <i class="icon-whatsapp"></i>
           <span>
@@ -159,6 +173,26 @@
                     <label for="pwr_field_year">Ano Modelo</label>
                     <select id="pwr_field_year" name="year">
                       <option value="">Selecione</option>
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                      <option value="2010">2010</option>
+                      <option value="2009">2009</option>
+                      <option value="2008">2008</option>
+                      <option value="2007">2007</option>
+                      <option value="2006">2006</option>
+                      <option value="2005">2005</option>
+                      <option value="2004">2004</option>
                       <!-- Lista de opções dos últimos 20 anos -->
                       <!-- Exemplo: -->
                       <!-- <option value="2022">2022</option> -->
@@ -181,15 +215,32 @@
               <div class="step" style="display: none;" id="pwr_step_3">
                 <div class="group-form">
                   <label for="pwr_field_state">Moro no Estado:</label>
-                  <select id="pwr_field_state" name="state">
+                  <select id="pwr_field_state" name="state" required>
                     <option value="">Selecione</option>
+                    <option value="Mato Grosso">Mato Grosso</option>
+                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                    <option value="Minas Gerais">Minas Gerais</option>
+                    <option value="Pará">Pará</option>
+                    <option value="Paraíba">Paraíba</option>
+                    <option value="Paraná">Paraná</option>
+                    <option value="Pernambuco">Pernambuco</option>
+                    <option value="Piauí">Piauí</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                    <option value="Rondônia">Rondônia</option>
+                    <option value="Roraima">Roraima</option>
+                    <option value="Santa Catarina">Santa Catarina</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Sergipe">Sergipe</option>
+                    <option value="Tocantins">Tocantins</option>
                     <!-- Lista de opções de estados continua... -->
                     <!-- Exemplo: -->
                     <!-- <option value="SP">São Paulo</option> -->
                   </select>
                 </div>
                 <div class="group-form">
-                  <label for="">Você usa o seu veículo em Taxi ou Aplicativo?</label>
+                  <label for="">Você usa o seu veículo como Taxi ou Uber?</label>
                   <div class="box-input">
                     <input id="pwr_field_uber" type="checkbox" class="option-input checkbox" name="useUber">
                     <label for="pwr_field_uber">Sim <small>(deixe desmarcado se não usar)</small></label>
@@ -198,8 +249,7 @@
                 <div class="row-flexbox">
                   <button type="button" class="back" id="pwr_step_3_back" onclick="prevStep(3)"><i
                       class="icon-left"></i></button>
-                  <!-- <button type="button" class="button" id="pwr_step_3_go" onclick="submitForm()">Receber -->
-                    <button type="submit" id="submitBtn" class="button" id="pwr_step_3_go" onclick="submitForm()">Receber
+                  <button type="submit" id="submitBtn" class="button" id="pwr_step_3_go" onclick="submitForm()">Receber
                     Cotação</button>
                 </div>
               </div>
@@ -562,20 +612,37 @@
 
     jQuery('#complete_form').on('submit', function (e) {
       e.preventDefault();
-      jQuery('#submitBtn').html('Please wait...');
-      jQuery('#submitBtn').attr('disabled', true);
-      jQuery.ajax({
-        url: 'https://script.google.com/macros/s/AKfycby7WaIyda2McGSiQIAqfNecZ3elWx8IGXGMJOMkvSi0iLzkkNnwJxx5c1_FGtRrZ_Rc/exec',
-        type: 'post',
-        data: jQuery('#complete_form').serialize(),
-        success: async function (result) {
-          jQuery('#complete_form')[0].reset();
-          jQuery('#submitBtn').html('Thank You');
-          jQuery('#submitBtn').attr('disabled', false);
-          await delay(5000)
-          jQuery('#submitBtn').html('Send Message');
-          //window.location.href='';
-        }
+
+      // Obtém a data e hora atual do navegador do usuário
+      const now = new Date();
+      const formattedDateTime = now.toLocaleString(); // Formata a data e hora para o formato local do usuário
+
+      // Adiciona a data e hora ao formulário antes de enviar
+      // Adiciona um campo oculto no formulário com a data e hora
+      jQuery('<input>').attr({
+        type: 'hidden',
+        name: 'data_hora',
+        value: formattedDateTime
+      }).appendTo('#complete_form');
+
+      jQuery('#submitBtn').html('Enviando...');
+
+      // Simula o envio dos dados por 2 segundos
+      delay(2000).then(async () => {
+        jQuery('#submitBtn').html('Enviado com sucesso.');
+        jQuery.ajax({
+          url: 'https://script.google.com/macros/s/AKfycby7WaIyda2McGSiQIAqfNecZ3elWx8IGXGMJOMkvSi0iLzkkNnwJxx5c1_FGtRrZ_Rc/exec',
+          type: 'post',
+          data: jQuery('#complete_form').serialize(),
+          success: function (result) {
+            jQuery('#complete_form')[0].reset();
+            //window.location.href='';
+          }
+        });
+
+        // Aguarda mais 10 segundos antes de restaurar o texto do botão
+        await delay(10000);
+        jQuery('#submitBtn').html('Um representante entrará em contato');
       });
     });
   </script>
