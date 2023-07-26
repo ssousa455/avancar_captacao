@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="pwrContentName"></title>
+  <!-- <script src="src/scripts/pwr.js"></script> -->
+  <script async="" src="js/fbevents.js"></script>
+  <script src="js/pwr_comparacao_tabelas.js"></script>
+
+  <link rel="icon" type="image/png" class="cmpnFvIcn">
+
+  <script>function loadPage() { PowerCRM.init(['4v4nc4r protec4o veicul4r377']); }</script>
+
+  <style>
+    :root {
+      /* A cor principal e uma variação dela, serve para o gradient do Banner */
+      --corDefault: #177ef3;
+      --corDefaultDark: #0064d6;
+      /* Cor Botão */
+      --corButtonBanner: #2ecc71;
+      /* Usado para a borda do número no Banner */
+      --corDefaultOpacity: #ffffff;
+      /* Cor dos Ícones */
+      --corDefaultIcons: #177ef3;
+      /* Cor do Rodapé */
+      --corFooter: #2c3e53;
+      /* Usado para a borda no rodapé */
+      --corDefaultIconsOpacity: rgba(255, 255, 255, 0.15);
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- Facebook Pixel Code -->
+
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+
+  <!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+
+  <!-- End Meta Pixel Code -->
+
+  <!-- Google tag (gtag.js) - Google Analytics -->
+
+  <!-- End Google Analytics Tag -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- Início do Header -->
+    <!-- <header class="header-page">
+      <div class="container">
+        <img style="display:none;" class="pwrImgLogo" id="logo" alt="Logo">
+        <a style="display:none;" href="javascript:void(0)" target="_blank" class="button-whatsapp pwrConsultantExists">
+          <i class="icon-whatsapp"></i>
+          <span>
+            <small>WhatsApp do consultor</small>
+            <p class="pwrConsultantPhone"></p>
+          </span>
+        </a>
+      </div>
+    </header> -->
+    <header class="header-page">
+      <div class="container">
+        <img style="" class="pwrImgLogo" id="logo" alt="Logo" src="https://app.powercrm.com.br/cmpnImg?h=dWDV8dEV">
+        <a style=""
+          href="https://api.whatsapp.com/send?phone=5511934074414&amp;text=Ol%C3%A1 SERGIO SOUZA, quero fazer uma cota%C3%A7%C3%A3o."
+          target="_blank" class="button-whatsapp pwrConsultantExists">
+          <i class="icon-whatsapp"></i>
+          <span>
+            <small>WhatsApp do consultor</small>
+            <p class="pwrConsultantPhone">(11) 93407-4414</p>
+          </span>
+        </a>
+      </div>
+    </header>
+    <!-- Fim do Header -->
+
+    <!-- Banner -->
+    <section class="banner pwrBackColor" pwrBackColor" style="background-color: rgb(0, 179, 209);">
+      <!-- Header Banner -->
+      <div class="container">
+        <header>
+          <!-- Text Banner -->
+          <div class="text-banner">
+            <iframe width="100%" height="315" style="border-radius: 10px;"
+              src="https://www.youtube-nocookie.com/embed/o0mUMItL-nI?controls=0" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""></iframe>
+            <br>
+            <br>
+            <div>
+              <h2 class="med">Duvidas? Entenda como trabalhamos nesse Podcast...</h2>
+            </div>
+          </div>
+          <!-- Formulário -->
+          <div class="box-call-to-action-form pwr_form form-wrapper">
+            <span>
+              Proteja Agora!
+            </span>
+            <!-- Formulário de Etapas -->
+            <form name="google-sheet1" id="complete_form" method="post">
+              <!-- Etapa 1: Informações Pessoais -->
+              <div class="step" id="pwr_step_1">
+                <div class="group-form">
+                  <label for="">Meu nome é:</label>
+                  <input type="text" id="pwr_field_name" name="name" required>
+                </div>
+                <div class="group-form">
+                  <label for="">Informe seu e-mail:</label>
+                  <input type="text" id="pwr_field_email" name="email" required>
+                </div>
+                <div class="group-form">
+                  <label for="pwr_field_mobile">Informe seu WhatsApp:</label>
+                  <input type="tel" id="pwr_field_mobile" name="whatsapp" required>
+                </div>
+                <div class="group-form">
+                  <button type="button" class="button" id="pwr_step_1_next" onclick="nextStep(1)">Próximo passo</button>
+                </div>
+              </div>
+
+              <!-- Etapa 2: Informações do Veículo -->
+              <div class="step" style="display: none;" id="pwr_step_2">
+                <div class="group-form">
+                  <label for="">Tipo de veículo:</label>
+                  <ul>
+                    <li>
+                      <input type="radio" id="pwr_field_type_car" class="option-input radio" name="pwr_field_type"
+                        value="1">
+                      <label for="pwr_field_type_car">Carro</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="pwr_field_type_motorcycle" class="option-input radio"
+                        name="pwr_field_type" value="2">
+                      <label for="pwr_field_type_motorcycle">Moto</label>
+                    </li>
+                    <li>
+                      <input id="pwr_field_type_truck" type="radio" class="option-input radio" name="pwr_field_type"
+                        value="3">
+                      <label for="pwr_field_type_truck">Caminhão</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row-flexbox">
+                  <div class="group-form two-col">
+                    <label for="pwr_field_brand">Marca</label>
+                    <input type="text" id="pwr_field_brand" maxlength="15" name="brand">
+                  </div>
+                  <div class="group-form two-col">
+                    <label for="pwr_field_year">Ano Modelo</label>
+                    <select id="pwr_field_year" name="year">
+                      <option value="">Selecione</option>
+                      <!-- Lista de opções dos últimos 20 anos -->
+                      <!-- Exemplo: -->
+                      <!-- <option value="2022">2022</option> -->
+                      <!-- Continuar até 2004 (20 anos atrás) -->
+                    </select>
+                  </div>
+                </div>
+                <div class="group-form">
+                  <label for="pwr_field_model">Modelo</label>
+                  <input type="text" id="pwr_field_model" maxlength="15" name="model">
+                </div>
+                <div class="row-flexbox">
+                  <button type="button" class="back" id="pwr_step_2_back" onclick="prevStep(2)"><i
+                      class="icon-left"></i></button>
+                  <button type="button" class="button" id="pwr_step_2_next" onclick="nextStep(2)">Próximo passo</button>
+                </div>
+              </div>
+
+              <!-- Etapa 3: Informações de Localização -->
+              <div class="step" style="display: none;" id="pwr_step_3">
+                <div class="group-form">
+                  <label for="pwr_field_state">Moro no Estado:</label>
+                  <select id="pwr_field_state" name="state">
+                    <option value="">Selecione</option>
+                    <!-- Lista de opções de estados continua... -->
+                    <!-- Exemplo: -->
+                    <!-- <option value="SP">São Paulo</option> -->
+                  </select>
+                </div>
+                <div class="group-form">
+                  <label for="">Você usa o seu veículo em Taxi ou Aplicativo?</label>
+                  <div class="box-input">
+                    <input id="pwr_field_uber" type="checkbox" class="option-input checkbox" name="useUber">
+                    <label for="pwr_field_uber">Sim <small>(deixe desmarcado se não usar)</small></label>
+                  </div>
+                </div>
+                <div class="row-flexbox">
+                  <button type="button" class="back" id="pwr_step_3_back" onclick="prevStep(3)"><i
+                      class="icon-left"></i></button>
+                  <!-- <button type="button" class="button" id="pwr_step_3_go" onclick="submitForm()">Receber -->
+                    <button type="submit" id="submitBtn" class="button" id="pwr_step_3_go" onclick="submitForm()">Receber
+                    Cotação</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </header>
+      </div>
+      <!-- Fim do formulário -->
+      <!-- Footer Banner -->
+      <div class="container">
+        <footer>
+          <div class="box-banner">
+            <div class="number" style="padding: 0px 14px;">1</div>
+            <div class="text-box">
+              <span>Fa&ccedil;a uma cota&ccedil;&atilde;o</span>
+              <p>
+                Menos de 1 minuto você descobre o melhor valor do mercado para proteger seu carro, moto ou caminhão.
+              </p>
+            </div>
+          </div>
+          <div class="box-banner">
+            <div class="number">2</div>
+            <div class="text-box">
+              <span>Números que surpreendem</span>
+              <p>
+                Mais de 37mil Associados atendidos pela Avancar em todo o Brasil.
+              </p>
+            </div>
+          </div>
+
+          <div class="box-banner">
+            <div class="number" style="padding: 0px 16px;">3</div>
+            <div class="text-box">
+              <span>Contrate Agora</span>
+              <p>
+                Proteja seu veiculo em menos de 7 minutos através do seu celular, baixando App Avancar ou clique em
+                consultores no site.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <!-- Fim do Banner -->
+
+    <!-- Proteção Veicular Completa -->
+    <div class="section-boxs">
+      <div class="container">
+
+        <div class="title-section">
+          <span>Proteção Veicular Completa</span>
+          <p>Com ressarcimento de até 100% da tabela FIPE</p>
+        </div>
+
+        <ul class="lists-box">
+          <li>
+            <i class="icon-icone-furto-roubo"></i>
+            <div class="text-list-box">
+              <span>Veículo Furtado/Roubado:</span>
+              <p>
+                95% dos atendimentos são feitos on-line, sem exigência presencial. Tendo rapidez, agilidade e garantida
+                no recebimento do valor do automóvel 100% FIPE.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <i class="icon-icone-colisoes"></i>
+            <div class="text-list-box">
+              <span>Colisão com seu veículo:</span>
+              <p>
+                A AVANCAR possui credenciadas em todo o território nacional com pontuação máxima no Google realizando o
+                melhor reparo em seu veículo sinistrado em questão de estética e originalidade com peças originais e/ou
+                genuínas sempre com qualidade.
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-perda-total"></i>
+            <div class="text-list-box">
+              <span>Seu Automóvel com Perda Total:</span>
+              <p>
+                Nossa preocupação é com a integridade física de todos os Associados AVANCAR, do qual após abertura de
+                sinistro temos uma equipe de profissionais para avaliação do ocorrido com seu veículo. <br>
+                Caso os itens de segurança e demais peças não possam ter recuperação, após diagnóstico você será
+                encaminhado para o agendamento financeiro para o recebimento do valor de seu veículo 100% FIPE.
+
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-incendio"></i>
+            <div class="text-list-box">
+              <span>Incêndio</span>
+              <p>
+                Após colisão, seu veículo pegou fogo? Possuímos cobertura! <br>
+                Garantindo ressarcimento 100% da FIPE do seu veículo.
+
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-granizo"></i>
+            <div class="text-list-box">
+              <span>Seu veículo levado por enchente ou danificado por chuva de granizo?</span>
+              <p>
+                Fique tranquilo, quando a AVANCAR fala em cobertura total é porque realmente você está com a mais
+                completa e econômica proteção para seu veículo. <br>
+                Garantimos 100% FIPE do seu veículo por fenômenos naturais.
+
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-brasil"></i>
+            <div class="text-list-box">
+              <span>Cobertura para você em todo o Brasil:</span>
+              <p>
+                Já são mais de 37 mil clientes atendidos do Oiapoque ao Chuí.
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-carro-reserva"></i>
+            <div class="text-list-box">
+              <span>Seu carro reserva:</span>
+              <p>
+                Clientes Diamante AVANCAR tem disponível carro reserva! <br>
+                Caso você precise no momento em que seu veículo estiver em nossa credenciada em recuperação após
+                sinistros.
+
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-colisoes"></i>
+            <div class="text-list-box">
+              <span>Colisão com terceiros:</span>
+              <p>
+                Você possui cobertura completa se caso o seu automóvel ser causador de danos aos veículos de terceiros,
+                os planos Gold e Diamante garantem essa cobertura.
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="icon-icone-vidros"></i>
+            <div class="text-list-box">
+              <span>Para-brisa quebrado?</span>
+              <p>
+                Seu veículo com qualquer vidro danificado, trocado em uma das nossas credenciadas em todo território
+                nacional.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+        <div class="row-flexbox-center">
+          <button class="button-modal" onclick="scrollToFormSection()">Faça uma cotação</button>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="title-section">
+          <span> Alguns depoimentos de nossos Associados(a)</span>
+
+        </div>
+
+        <center>
+          <iframe width="100%" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/x-c18DVdA7c"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+        </center>
+      </div>
+
+    </div>
+    <!-- Fim da Sessão Proteção Veicular Completa -->
+
+    <!-- Assistência 24 Horas Completa -->
+    <div class="section-list">
+      <div class="container">
+        <div class="title-section">
+          <span>Seu automóvel Protegido 24hs</span>
+          <p>Assistência como reboque e demais atendimentos em todo Brasil.</p>
+        </div>
+
+        <ul class="lists">
+
+          <li class="first-li">
+            <div class="product">
+              <span>Produto</span>
+            </div>
+            <div class="description">
+              <p>Descrição</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="product">
+              <i class="icon-check"></i>
+              <span>Reboque</span>
+            </div>
+            <div class="description">
+              <p>
+                -Você já ficou com o seu veículo sem dar partida ou nem dar sinal no painel? <br> Para os Associados
+                AVANCAR é só ligar em nosso 0800 e informar sobre sua pane mecânica ou elétrica e teremos agilidade em
+                atender você.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="product">
+              <i class="icon-check"></i>
+              <span>Chaveiro</span>
+            </div>
+            <div class="description">
+              <p>-Esqueceu sua chave dentro do carro trancado? Chaveiros 24hs para tirar você e sua família do sufoco na
+                abertura do veículo.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="product">
+              <i class="icon-check"></i>
+              <span>Troca de pneus</span>
+            </div>
+            <div class="description">
+              <p>
+                -Trocamos seu pneu furado em qualquer rodovia do País! Você despreocupado com seu veículo tendo
+                atendimento rápido. <br> É isso que queremos lhe proporcionar!
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="product">
+              <i class="icon-check"></i>
+              <span>Taxi</span>
+            </div>
+            <div class="description">
+              <p>
+                -Táxi e Uber para você e sua família continuarem o seu trajeto após algum imprevisto com o veículo, e
+                não perder aquele compromisso importante.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="product">
+              <i class="icon-check"></i>
+              <span>Hospedagem</span>
+            </div>
+            <div class="description">
+              <p>
+                -Diária em hotel para você e passageiros descansarem após algum imprevisto com o veículo.
+
+              </p>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+    <!-- Fim da Sessão Assistência 24 Horas Completa -->
+
+    <!-- Sessão Call to Action -->
+    <div class="section-call-to-action">
+
+      <div class="container">
+        <h2>Faça uma cotação gratuita</h2>
+        <p>Descubra em tempo real quanto custa proteger seu veículo</p>
+        <div class="row-flexbox-center">
+          <button class="button-modal" onclick="scrollToFormSection()">Faça uma cotação</button>
+        </div>
+      </div>
+    </div>
+    <!-- Fim da sessão Call to Action -->
+
+    <!-- Footer -->
+    <footer class="footer-page">
+      <div class="container">
+        <header style="display:none;" class="pwrConsultantExists">
+          <div class="consultant">
+            <img class="pwrConsultantPicture" alt="">
+            <div class="dados-consultant">
+              <span>Consultor</span>
+              <span class="pwrConsultantName"></span>
+              <span class="pwrConsultantEmail"></span>
+            </div>
+          </div>
+
+          <a href="javascript:void(0)" target="_blank" class="button-whatsapp pwrConsultantExists">
+            <i class="icon-whatsapp"></i>
+            <span>
+              <small>WhatsApp do consultor</small>
+              <p class="pwrConsultantPhone"></p>
+            </span>
+          </a>
+        </header>
+        <footer>
+          <p class="pwrContentName"></p>
+          <a target="" href="" title="">
+            <img alt="" src="fonts/power-crm.svg">
+          </a>
+        </footer>
+      </div>
+    </footer>
+    <!-- Fim do Footer -->
+  </div>
+  <script type="text/javascript" async="" src="js/1a983fdd-aea3-41b3-90a0-f6ad57721c6f-loader.js"></script>
+  <script>
+    // Função para rolar até a seção do formulário
+    function scrollToFormSection() {
+      var formSection = document.getElementById('logo');
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script>
+    // Função para avançar para a próxima etapa
+    function nextStep(currentStep) {
+      var currentStepDiv = document.getElementById('pwr_step_' + currentStep);
+      var nextStepDiv = document.getElementById('pwr_step_' + (currentStep + 1));
+      currentStepDiv.style.display = 'none';
+      nextStepDiv.style.display = 'block';
+    }
+
+    // Função para voltar para a etapa anterior
+    function prevStep(currentStep) {
+      var currentStepDiv = document.getElementById('pwr_step_' + currentStep);
+      var prevStepDiv = document.getElementById('pwr_step_' + (currentStep - 1));
+      currentStepDiv.style.display = 'none';
+      prevStepDiv.style.display = 'block';
+    }
+
+    // Função para formatar o número de telefone no padrão (XX) XXXXXXXXX
+    function formatarTelefone(telefone) {
+      telefone = telefone.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+      telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Formata para (XX) XXXXX-XXXX
+      return telefone;
+    }
+
+    // Event listener para o campo de telefone
+    const campoTelefone = document.getElementById('pwr_field_mobile');
+    campoTelefone.addEventListener('input', function (event) {
+      const valorAtual = event.target.value;
+      const valorFormatado = formatarTelefone(valorAtual);
+      event.target.value = valorFormatado;
+    });
+  </script>
+
+  <!-- integração com google planilhas -->
+  <script>
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    const URL = ""
+
+    jQuery('#complete_form').on('submit', function (e) {
+      e.preventDefault();
+      jQuery('#submitBtn').html('Please wait...');
+      jQuery('#submitBtn').attr('disabled', true);
+      jQuery.ajax({
+        url: 'https://script.google.com/macros/s/AKfycby7WaIyda2McGSiQIAqfNecZ3elWx8IGXGMJOMkvSi0iLzkkNnwJxx5c1_FGtRrZ_Rc/exec',
+        type: 'post',
+        data: jQuery('#complete_form').serialize(),
+        success: async function (result) {
+          jQuery('#complete_form')[0].reset();
+          jQuery('#submitBtn').html('Thank You');
+          jQuery('#submitBtn').attr('disabled', false);
+          await delay(5000)
+          jQuery('#submitBtn').html('Send Message');
+          //window.location.href='';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
